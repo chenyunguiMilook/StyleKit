@@ -15,6 +15,7 @@ public enum Styles {
         // control colors
         public static let controlBg = UIColor(resource: .controlBg)
         public static let controlBorder = UIColor(resource: .controlBorder)
+        public static let controlBorderActive = UIColor.systemBlue
         public static let controlSeparator = UIColor(resource: .controlSeparator)
         public static let iconLabel = UIColor(resource: .iconLabel)
         public static let primaryLabel = UIColor(resource: .primaryLabel)
@@ -39,16 +40,23 @@ public enum Styles {
         public static let xLarge: CGFloat = baseUnit * 4  // 32.0
     }
     
+    public enum Insets {
+        public static let textInputer = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+    }
+    
     public enum Size {
         public static let controlHeight: CGFloat = 24
+        public static let controlBorderWidth: CGFloat = 1
     }
     
     public enum Font {
-        public static let inputer: UIFont = UIFont.systemFont(ofSize: 16)
+        public static let inputer: UIFont = UIFont.systemFont(ofSize: 12, weight: .regular)
     }
     
     public static let color = Color.self
     public static let radius = Radius.self
     public static let spacing = Spacing.self
+    public static let insets = Insets.self
+    public static let size = Size.self
     public static let font = Font.self
 }
