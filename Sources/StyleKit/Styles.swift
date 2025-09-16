@@ -11,12 +11,13 @@ import UIKit
 public enum Styles {
     
     public enum Color {
-        public static let primary = UIColor.white
-        
-        // adaptive colors
-        
+        public static let background = UIColor(resource: .background)
         // control colors
-        
+        public static let controlBg = UIColor(resource: .controlBg)
+        public static let controlBorder = UIColor(resource: .controlBorder)
+        public static let controlSeparator = UIColor(resource: .controlSeparator)
+        public static let iconLabel = UIColor(resource: .iconLabel)
+        public static let primaryLabel = UIColor(resource: .primaryLabel)
     }
     
     public enum Radius {
@@ -36,6 +37,10 @@ public enum Styles {
         public static let medium: CGFloat = baseUnit * 2  // 16.0
         public static let large: CGFloat = baseUnit * 3  // 24.0
         public static let xLarge: CGFloat = baseUnit * 4  // 32.0
+    }
+    
+    public enum Size {
+        public static let controlHeight: CGFloat = 24
     }
     
     public enum Font {
