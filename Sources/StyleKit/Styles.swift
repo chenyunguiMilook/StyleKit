@@ -46,7 +46,7 @@ public enum Styles {
     }
     
     public enum Size {
-        public static let controlHeight: CGFloat = 24
+        public static let controlHeight: CGFloat = 22
         public static let controlBorderWidth: CGFloat = 1
     }
     
