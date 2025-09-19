@@ -17,8 +17,11 @@ public enum Styles {
         public static let controlBorder = UIColor(resource: .controlBorder)
         public static let controlBorderActive = UIColor.systemBlue
         public static let controlSeparator = UIColor(resource: .controlSeparator)
+        public static let controlActive = UIColor(resource: .controlActive)
         public static let pickerBg = UIColor(resource: .pickerBg)
         public static let iconLabel = UIColor(resource: .iconLabel)
+        public static let iconNormal = UIColor(resource: .iconNormal)
+        public static let iconActive = UIColor(resource: .iconActive)
         public static let primaryLabel = UIColor(resource: .primaryLabel)
     }
     
