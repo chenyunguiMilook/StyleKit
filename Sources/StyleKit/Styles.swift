@@ -48,15 +48,18 @@ public enum Styles {
         public static let medium: CGFloat = baseUnit * 2  // 16.0
         public static let large: CGFloat = baseUnit * 3  // 24.0
         public static let xLarge: CGFloat = baseUnit * 4  // 32.0
+        
     }
     
     public enum Insets {
         public static let textInputer = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+        public static let panelHeader = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
     }
     
     public enum Size {
         public static let controlHeight: CGFloat = 22
         public static let controlBorderWidth: CGFloat = 1
+        public static let panelHeaderHeight = Styles.insets.panelHeader.top + Styles.insets.panelHeader.bottom + Styles.size.controlHeight
     }
     
     public enum Font {
