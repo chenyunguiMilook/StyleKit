@@ -20,6 +20,7 @@ public enum Styles {
         public static let controlActive = UIColor(resource: .controlActive)
         public static let controlHover = UIColor(resource: .controlHover)
         public static let pickerBg = UIColor(resource: .pickerBg)
+        public static let panelBg = UIColor(resource: .panelBg)
         public static let panelTitle = UIColor(resource: .panelTitle)
         public static let iconLabel = UIColor(resource: .iconLabel)
         public static let iconNormal = UIColor(resource: .iconNormal)
