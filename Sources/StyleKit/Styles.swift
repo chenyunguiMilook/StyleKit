@@ -26,6 +26,7 @@ public enum Styles {
         public static let primaryLabel = UIColor(resource: .primaryLabel)
         public static let rulerBg = UIColor(resource: .rulerBg)
         public static let rulerMark = UIColor(resource: .rulerMark)
+        public static let pixelGridColor = UIColor.systemGray.withAlphaComponent(0.3)
     }
     
     public enum Radius {
