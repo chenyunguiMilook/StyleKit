@@ -24,6 +24,8 @@ public enum Styles {
         public static let iconNormal = UIColor(resource: .iconNormal)
         public static let iconActive = UIColor(resource: .iconActive)
         public static let primaryLabel = UIColor(resource: .primaryLabel)
+        public static let rulerBg = UIColor(resource: .rulerBg)
+        public static let rulerMark = UIColor(resource: .rulerMark)
     }
     
     public enum Radius {
