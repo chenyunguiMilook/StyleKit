@@ -20,6 +20,7 @@ public enum Styles {
         public static let controlActive = UIColor(resource: .controlActive)
         public static let controlHover = UIColor(resource: .controlHover)
         public static let pickerBg = UIColor(resource: .pickerBg)
+        public static let panelTitle = UIColor(resource: .panelTitle)
         public static let iconLabel = UIColor(resource: .iconLabel)
         public static let iconNormal = UIColor(resource: .iconNormal)
         public static let iconActive = UIColor(resource: .iconActive)
@@ -59,6 +60,7 @@ public enum Styles {
     
     public enum Font {
         public static let inputer: UIFont = UIFont.systemFont(ofSize: 12, weight: .regular)
+        public static let panelTitle = UIFont.systemFont(ofSize: 12, weight: .semibold)
     }
     
     public static let color = Color.self
