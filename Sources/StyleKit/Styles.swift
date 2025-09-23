@@ -29,6 +29,7 @@ public enum Styles {
         public static let rulerBg = UIColor(resource: .rulerBg)
         public static let rulerMark = UIColor(resource: .rulerMark)
         public static let pixelGridColor = UIColor.systemGray.withAlphaComponent(0.3)
+        public static let separator = UIColor(resource: .separator)
     }
     
     public enum Radius {
