@@ -60,6 +60,7 @@ public enum Styles {
         public static let controlHeight: CGFloat = 22
         public static let controlBorderWidth: CGFloat = 1
         public static let panelHeaderHeight = Styles.insets.panelHeader.top + Styles.insets.panelHeader.bottom + Styles.size.controlHeight
+        public static let panelFooterHeight: Double = 12
     }
     
     public enum Font {
