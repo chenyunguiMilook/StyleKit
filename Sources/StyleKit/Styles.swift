@@ -67,6 +67,7 @@ public enum Styles {
     public enum Font {
         public static let inputer: UIFont = UIFont.systemFont(ofSize: 12, weight: .regular)
         public static let panelTitle = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        public static let picker: UIFont = UIFont.systemFont(ofSize: 12, weight: .regular)
     }
     
     public static let color = Color.self
