@@ -14,6 +14,7 @@ public enum Styles {
         public static let background = UIColor(resource: .background)
         // control colors
         public static let controlBg = UIColor(resource: .controlBg)
+        public static let controlBgDisable = UIColor(resource: .controlBgDisable)
         public static let controlBorder = UIColor(resource: .controlBorder)
         public static let controlBorderActive = UIColor.systemBlue
         public static let controlSeparator = UIColor(resource: .controlSeparator)
@@ -26,6 +27,7 @@ public enum Styles {
         public static let iconNormal = UIColor(resource: .iconNormal)
         public static let iconActive = UIColor(resource: .iconActive)
         public static let primaryLabel = UIColor(resource: .primaryLabel)
+        public static let primaryLabelDisable = UIColor(resource: .primaryLabelDisable)
         public static let rulerBg = UIColor(resource: .rulerBg)
         public static let rulerMark = UIColor(resource: .rulerMark)
         public static let buttonHighlight = UIColor(resource: .buttonHighlight)
