@@ -26,6 +26,9 @@ public enum Styles {
         public static let iconLabel = UIColor(resource: .iconLabel)
         public static let iconNormal = UIColor(resource: .iconNormal)
         public static let iconActive = UIColor(resource: .iconActive)
+        public static let tagBg = UIColor(resource: .tagBg)
+        public static let tagBgHover = UIColor(resource: .tagBgHover)
+        public static let tagLabel = UIColor(resource: .tagLabel)
         public static let primaryLabel = UIColor(resource: .primaryLabel)
         public static let primaryLabelDisable = UIColor(resource: .primaryLabelDisable)
         public static let rulerBg = UIColor(resource: .rulerBg)
@@ -71,6 +74,7 @@ public enum Styles {
         public static let inputer: UIFont = UIFont.systemFont(ofSize: 12, weight: .regular)
         public static let panelTitle = UIFont.systemFont(ofSize: 12, weight: .semibold)
         public static let picker: UIFont = UIFont.systemFont(ofSize: 12, weight: .regular)
+        public static let tag: UIFont = UIFont.systemFont(ofSize: 10, weight: .regular)
     }
     
     public static let color = Color.self
