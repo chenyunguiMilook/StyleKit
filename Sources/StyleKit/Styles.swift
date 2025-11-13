@@ -5,37 +5,43 @@
 //  Created by chenyungui on 2025/9/16.
 //
 
+#if canImport(UIKit)
+    import UIKit
+    public typealias AppColor = UIColor
 
-import UIKit
+#elseif canImport(AppKit) && !targetEnvironment(macCatalyst)
+    import AppKit
+    public typealias AppColor = NSColor
+#endif
 
 public enum Styles {
     
     public enum Color {
-        public static let background = UIColor(resource: .background)
+        public static let background = AppColor(resource: .background)
         // control colors
-        public static let controlBg = UIColor(resource: .controlBg)
-        public static let controlBgDisable = UIColor(resource: .controlBgDisable)
-        public static let controlBorder = UIColor(resource: .controlBorder)
-        public static let controlBorderActive = UIColor.systemBlue
-        public static let controlSeparator = UIColor(resource: .controlSeparator)
-        public static let controlActive = UIColor(resource: .controlActive)
-        public static let controlHover = UIColor(resource: .controlHover)
-        public static let pickerBg = UIColor(resource: .pickerBg)
-        public static let panelBg = UIColor(resource: .panelBg)
-        public static let panelTitle = UIColor(resource: .panelTitle)
-        public static let iconLabel = UIColor(resource: .iconLabel)
-        public static let iconNormal = UIColor(resource: .iconNormal)
-        public static let iconActive = UIColor(resource: .iconActive)
-        public static let tagBg = UIColor(resource: .tagBg)
-        public static let tagBgHover = UIColor(resource: .tagBgHover)
-        public static let tagLabel = UIColor(resource: .tagLabel)
-        public static let primaryLabel = UIColor(resource: .primaryLabel)
-        public static let primaryLabelDisable = UIColor(resource: .primaryLabelDisable)
-        public static let rulerBg = UIColor(resource: .rulerBg)
-        public static let rulerMark = UIColor(resource: .rulerMark)
-        public static let buttonHighlight = UIColor(resource: .buttonHighlight)
-        public static let pixelGridColor = UIColor.systemGray.withAlphaComponent(0.3)
-        public static let separator = UIColor(resource: .separator)
+        public static let controlBg = AppColor(resource: .controlBg)
+        public static let controlBgDisable = AppColor(resource: .controlBgDisable)
+        public static let controlBorder = AppColor(resource: .controlBorder)
+        public static let controlBorderActive = AppColor.systemBlue
+        public static let controlSeparator = AppColor(resource: .controlSeparator)
+        public static let controlActive = AppColor(resource: .controlActive)
+        public static let controlHover = AppColor(resource: .controlHover)
+        public static let pickerBg = AppColor(resource: .pickerBg)
+        public static let panelBg = AppColor(resource: .panelBg)
+        public static let panelTitle = AppColor(resource: .panelTitle)
+        public static let iconLabel = AppColor(resource: .iconLabel)
+        public static let iconNormal = AppColor(resource: .iconNormal)
+        public static let iconActive = AppColor(resource: .iconActive)
+        public static let tagBg = AppColor(resource: .tagBg)
+        public static let tagBgHover = AppColor(resource: .tagBgHover)
+        public static let tagLabel = AppColor(resource: .tagLabel)
+        public static let primaryLabel = AppColor(resource: .primaryLabel)
+        public static let primaryLabelDisable = AppColor(resource: .primaryLabelDisable)
+        public static let rulerBg = AppColor(resource: .rulerBg)
+        public static let rulerMark = AppColor(resource: .rulerMark)
+        public static let buttonHighlight = AppColor(resource: .buttonHighlight)
+        public static let pixelGridColor = AppColor.systemGray.withAlphaComponent(0.3)
+        public static let separator = AppColor(resource: .separator)
     }
     
     public enum Radius {

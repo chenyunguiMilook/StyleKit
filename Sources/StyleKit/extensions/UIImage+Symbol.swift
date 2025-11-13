@@ -5,6 +5,7 @@
 //  Created by chenyungui on 2025/9/17.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UIImage.SymbolConfiguration {
@@ -37,3 +38,4 @@ extension UIImage {
     }
 }
 
+#endif
