@@ -5,9 +5,10 @@
 //  Created by chenyungui on 2025/9/16.
 //
 
-import UIKit
+import CoreGraphics
+import Foundation
 
-extension UIColor {
+extension AppColor {
     convenience init(hex: String, alpha: CGFloat = 1.0) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
