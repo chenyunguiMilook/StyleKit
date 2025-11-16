@@ -6,7 +6,7 @@
 //
 public protocol ColorCollection: Sendable {
     static var type: ColorCollectionType { get }
-    static var Colors: [ColorToken] { get }
+    static var colors: [ColorToken] { get }
 }
 
 public enum ColorCollectionType: String, Sendable, CaseIterable {
@@ -54,7 +54,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#303030ff")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#242424ff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -73,7 +73,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#fffffff2")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#ffffffff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -92,7 +92,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#1e1e1eff")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#111111ff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -111,7 +111,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#4d0b0aff")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#300603ff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -130,7 +130,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#522504ff")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#401b01ff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -149,7 +149,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#024023ff")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#062d1bff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -168,7 +168,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#0c0c0df2")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#0c0c0dff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -187,7 +187,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#57184aff")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#3f1536ff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -206,7 +206,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#1e1e1eff")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#111111ff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -225,7 +225,7 @@ public enum ColorPrimitive {
         public static let _900  = ColorToken(collection: type, name: "900", rgba: "#1e1e1eff")
         public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#111111ff")
         
-        public static let Colors: [ColorToken] = [
+        public static let colors: [ColorToken] = [
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
@@ -255,6 +255,6 @@ public enum ColorPrimitive {
     
     // MARK: - 通过 ColorCollectionType 获取颜色数组
     public static func colors(for type: ColorCollectionType) -> [ColorToken] {
-        return collection(for: type).Colors
+        return collection(for: type).colors
     }
 }
