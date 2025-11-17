@@ -16,6 +16,7 @@ public enum ColorCollectionType: String, Sendable, CaseIterable {
     case red
     case yellow
     case green
+    case blue
     case black
     case pink
     case gray
@@ -153,7 +154,26 @@ public enum ColorPrimitive {
             _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
         ]
     }
-
+    
+    // MARK: - Blue
+    public enum Blue: ColorCollection {
+        public static let type = ColorCollectionType.blue
+        public static let _100  = ColorToken(collection: type, name: "100", rgba: "#ebf5ffff")
+        public static let _200  = ColorToken(collection: type, name: "200", rgba: "#cce5f7ff")
+        public static let _300  = ColorToken(collection: type, name: "300", rgba: "#afd1f5ff")
+        public static let _400  = ColorToken(collection: type, name: "400", rgba: "#84b5e0ff")
+        public static let _500  = ColorToken(collection: type, name: "500", rgba: "#1378aeff")
+        public static let _600  = ColorToken(collection: type, name: "600", rgba: "#006699ff")
+        public static let _700  = ColorToken(collection: type, name: "700", rgba: "#005580ff")
+        public static let _800  = ColorToken(collection: type, name: "800", rgba: "#023754ff")
+        public static let _900  = ColorToken(collection: type, name: "900", rgba: "#022a40ff")
+        public static let _1000 = ColorToken(collection: type, name: "1000", rgba: "#061f2dff")
+        
+        public static let colors: [ColorToken] = [
+            _100, _200, _300, _400, _500, _600, _700, _800, _900, _1000
+        ]
+    }
+    
     // MARK: - Black (EFFECT_COLOR)
     public enum Black: ColorCollection {
         public static let type = ColorCollectionType.black
@@ -233,7 +253,7 @@ public enum ColorPrimitive {
     // MARK: - 所有家族
     public static let Families: [any ColorCollection.Type] = [
         Slate.self, White.self, Brand.self, Red.self,
-        Yellow.self, Green.self, Black.self, Pink.self,
+        Yellow.self, Green.self, Blue.self, Black.self, Pink.self,
         Gray.self, BrandB.self
     ]
     
@@ -246,6 +266,7 @@ public enum ColorPrimitive {
         case .red: return Red.self
         case .yellow: return Yellow.self
         case .green: return Green.self
+        case .blue: return Blue.self
         case .black: return Black.self
         case .pink: return Pink.self
         case .gray: return Gray.self

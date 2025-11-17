@@ -207,49 +207,49 @@ public enum ColorSemantic {
                 catagory: catagory,
                 collection: collection,
                 name: "default",
-                sdsLight: ColorPrimitive.Green._500,
-                sdsDark: ColorPrimitive.Green._700,
-                brandBLight: ColorPrimitive.Green._500
+                sdsLight: ColorPrimitive.Blue._500,
+                sdsDark: ColorPrimitive.Blue._700,
+                brandBLight: ColorPrimitive.Blue._500
             )
             public static let hover = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "hover",
-                sdsLight: ColorPrimitive.Green._600,
-                sdsDark: ColorPrimitive.Green._800,
-                brandBLight: ColorPrimitive.Green._600
+                sdsLight: ColorPrimitive.Blue._600,
+                sdsDark: ColorPrimitive.Blue._800,
+                brandBLight: ColorPrimitive.Blue._600
             )
             public static let secondary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "secondary",
-                sdsLight: ColorPrimitive.Green._200,
-                sdsDark: ColorPrimitive.Green._800,
-                brandBLight: ColorPrimitive.Green._200
+                sdsLight: ColorPrimitive.Blue._200,
+                sdsDark: ColorPrimitive.Blue._800,
+                brandBLight: ColorPrimitive.Blue._200
             )
             public static let secondaryHover = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "secondaryHover",
-                sdsLight: ColorPrimitive.Green._300,
-                sdsDark: ColorPrimitive.Green._900,
-                brandBLight: ColorPrimitive.Green._300
+                sdsLight: ColorPrimitive.Blue._300,
+                sdsDark: ColorPrimitive.Blue._900,
+                brandBLight: ColorPrimitive.Blue._300
             )
             public static let tertiary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "tertiary",
-                sdsLight: ColorPrimitive.Green._100,
-                sdsDark: ColorPrimitive.Green._900,
-                brandBLight: ColorPrimitive.Green._100
+                sdsLight: ColorPrimitive.Blue._100,
+                sdsDark: ColorPrimitive.Blue._900,
+                brandBLight: ColorPrimitive.Blue._100
             )
             public static let tertiaryHover = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "tertiaryHover",
-                sdsLight: ColorPrimitive.Green._200,
-                sdsDark: ColorPrimitive.Green._1000,
-                brandBLight: ColorPrimitive.Green._200
+                sdsLight: ColorPrimitive.Blue._200,
+                sdsDark: ColorPrimitive.Blue._1000,
+                brandBLight: ColorPrimitive.Blue._200
             )
         }
         
@@ -556,49 +556,49 @@ public enum ColorSemantic {
                 catagory: catagory,
                 collection: collection,
                 name: "default",
-                sdsLight: ColorPrimitive.Green._800,
-                sdsDark: ColorPrimitive.Green._200,
-                brandBLight: ColorPrimitive.Green._800
+                sdsLight: ColorPrimitive.Blue._800,
+                sdsDark: ColorPrimitive.Blue._200,
+                brandBLight: ColorPrimitive.Blue._800
             )
             public static let secondary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "secondary",
-                sdsLight: ColorPrimitive.Green._600,
-                sdsDark: ColorPrimitive.Green._400,
-                brandBLight: ColorPrimitive.Green._600
+                sdsLight: ColorPrimitive.Blue._600,
+                sdsDark: ColorPrimitive.Blue._400,
+                brandBLight: ColorPrimitive.Blue._600
             )
             public static let tertiary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "tertiary",
-                sdsLight: ColorPrimitive.Green._500,
-                sdsDark: ColorPrimitive.Green._600,
-                brandBLight: ColorPrimitive.Green._500
+                sdsLight: ColorPrimitive.Blue._500,
+                sdsDark: ColorPrimitive.Blue._600,
+                brandBLight: ColorPrimitive.Blue._500
             )
             public static let onPositive = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "onPositive",
-                sdsLight: ColorPrimitive.Green._100,
-                sdsDark: ColorPrimitive.Green._100,
-                brandBLight: ColorPrimitive.Green._100
+                sdsLight: ColorPrimitive.Blue._100,
+                sdsDark: ColorPrimitive.Blue._100,
+                brandBLight: ColorPrimitive.Blue._100
             )
             public static let onPositiveSecondary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "onPositiveSecondary",
-                sdsLight: ColorPrimitive.Green._800,
-                sdsDark: ColorPrimitive.Green._100,
-                brandBLight: ColorPrimitive.Green._800
+                sdsLight: ColorPrimitive.Blue._800,
+                sdsDark: ColorPrimitive.Blue._100,
+                brandBLight: ColorPrimitive.Blue._800
             )
             public static let onPositiveTertiary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "onPositiveTertiary",
-                sdsLight: ColorPrimitive.Green._800,
-                sdsDark: ColorPrimitive.Green._100,
-                brandBLight: ColorPrimitive.Green._800
+                sdsLight: ColorPrimitive.Blue._800,
+                sdsDark: ColorPrimitive.Blue._100,
+                brandBLight: ColorPrimitive.Blue._800
             )
         }
         
@@ -849,25 +849,25 @@ public enum ColorSemantic {
                 catagory: catagory,
                 collection: collection,
                 name: "default",
-                sdsLight: ColorPrimitive.Green._800,
-                sdsDark: ColorPrimitive.Green._200,
-                brandBLight: ColorPrimitive.Green._800
+                sdsLight: ColorPrimitive.Blue._800,
+                sdsDark: ColorPrimitive.Blue._200,
+                brandBLight: ColorPrimitive.Blue._800
             )
             public static let secondary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "secondary",
-                sdsLight: ColorPrimitive.Green._600,
-                sdsDark: ColorPrimitive.Green._400,
-                brandBLight: ColorPrimitive.Green._600
+                sdsLight: ColorPrimitive.Blue._600,
+                sdsDark: ColorPrimitive.Blue._400,
+                brandBLight: ColorPrimitive.Blue._600
             )
             public static let tertiary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "tertiary",
-                sdsLight: ColorPrimitive.Green._500,
-                sdsDark: ColorPrimitive.Green._600,
-                brandBLight: ColorPrimitive.Green._500
+                sdsLight: ColorPrimitive.Blue._500,
+                sdsDark: ColorPrimitive.Blue._600,
+                brandBLight: ColorPrimitive.Blue._500
             )
         }
         
@@ -1110,49 +1110,49 @@ public enum ColorSemantic {
                 catagory: catagory,
                 collection: collection,
                 name: "default",
-                sdsLight: ColorPrimitive.Green._800,
-                sdsDark: ColorPrimitive.Green._200,
-                brandBLight: ColorPrimitive.Green._800
+                sdsLight: ColorPrimitive.Blue._800,
+                sdsDark: ColorPrimitive.Blue._200,
+                brandBLight: ColorPrimitive.Blue._800
             )
             public static let secondary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "secondary",
-                sdsLight: ColorPrimitive.Green._600,
-                sdsDark: ColorPrimitive.Green._400,
-                brandBLight: ColorPrimitive.Green._600
+                sdsLight: ColorPrimitive.Blue._600,
+                sdsDark: ColorPrimitive.Blue._400,
+                brandBLight: ColorPrimitive.Blue._600
             )
             public static let tertiary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "tertiary",
-                sdsLight: ColorPrimitive.Green._500,
-                sdsDark: ColorPrimitive.Green._600,
-                brandBLight: ColorPrimitive.Green._500
+                sdsLight: ColorPrimitive.Blue._500,
+                sdsDark: ColorPrimitive.Blue._600,
+                brandBLight: ColorPrimitive.Blue._500
             )
             public static let onPositive = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "onPositive",
-                sdsLight: ColorPrimitive.Green._100,
-                sdsDark: ColorPrimitive.Green._100,
-                brandBLight: ColorPrimitive.Green._100
+                sdsLight: ColorPrimitive.Blue._100,
+                sdsDark: ColorPrimitive.Blue._100,
+                brandBLight: ColorPrimitive.Blue._100
             )
             public static let onPositiveSecondary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "onPositiveSecondary",
-                sdsLight: ColorPrimitive.Green._800,
-                sdsDark: ColorPrimitive.Green._100,
-                brandBLight: ColorPrimitive.Green._800
+                sdsLight: ColorPrimitive.Blue._800,
+                sdsDark: ColorPrimitive.Blue._100,
+                brandBLight: ColorPrimitive.Blue._800
             )
             public static let onPositiveTertiary = SemanticColor(
                 catagory: catagory,
                 collection: collection,
                 name: "onPositiveTertiary",
-                sdsLight: ColorPrimitive.Green._900,
-                sdsDark: ColorPrimitive.Green._100,
-                brandBLight: ColorPrimitive.Green._900
+                sdsLight: ColorPrimitive.Blue._900,
+                sdsDark: ColorPrimitive.Blue._100,
+                brandBLight: ColorPrimitive.Blue._900
             )
         }
         
