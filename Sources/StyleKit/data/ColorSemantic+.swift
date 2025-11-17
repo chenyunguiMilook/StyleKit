@@ -8,11 +8,34 @@
 //let textCollections = ColorSemantic.Text.collections
 //let firstGroupColors = textCollections[0].colors  // Default 组所有颜色
 
+import Foundation
+
 public protocol SemanticColorCatagory {
     static var collections: [SemanticColorCollection.Type] { get }
 }
 public protocol SemanticColorCollection {
     static var colors: [SemanticColor] { get }
+}
+
+extension ColorSemantic {
+    public static var catagories: [SemanticColorCatagory.Type] {
+        [
+            ColorSemantic.Background.self,
+            ColorSemantic.Text.self,
+            ColorSemantic.Border.self,
+            ColorSemantic.Icon.self,
+        ]
+    }
+    
+    public static func writeColorAssets(to folder: URL) {
+        for catagory in catagories {
+            for collection in catagory.collections {
+                for color in collection.colors {
+                    color.write(to: folder)
+                }
+            }
+        }
+    }
 }
 
 //// MARK: - Background 实现 SemanticColorCatagory
