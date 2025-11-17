@@ -17,6 +17,22 @@ public struct SemanticColor: Sendable {
     public let brandBLight: ColorToken
 }
 
+extension SemanticColor {
+    public var fullName: String {
+        "Color.\(catagory).\(collection).\(name)"
+    }
+    public var colorAsset: XCColorsAsset {
+        XCColorsAsset(light: sdsLight.color, dark: sdsDark.color)
+    }
+    
+    public func write(to folder: URL) {
+        let jsonURL = folder
+            .appendingPathComponent("\(fullName).colorset")
+            .appendingPathComponent("Contents.json")
+        try? self.colorAsset.jsonString().write(to: jsonURL, createIntermediateDirectories: true)
+    }
+}
+
 /// Defines the semantic color palette of the application, mapping abstract style names
 /// to concrete color tokens for different themes.
 public enum ColorSemantic {
