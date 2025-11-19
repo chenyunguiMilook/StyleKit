@@ -30,7 +30,7 @@ extension SemanticColor {
             .appendingPathComponent("\(fullName).colorset")
             .appendingPathComponent("Contents.json")
         do {
-            try self.colorAsset.jsonString().write(to: jsonURL, createIntermediateDirectories: true)
+            try JSONEncoder().encode(self.colorAsset).write(to: jsonURL)
         } catch {
             print(error.localizedDescription)
         }

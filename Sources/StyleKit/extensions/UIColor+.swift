@@ -35,4 +35,19 @@ extension AppColor {
         let a = CGFloat(rgba & 0xFF) / 255
         self.init(red: r, green: g, blue: b, alpha: a)
     }
+    
+    var rgbaComponents: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
+        #if canImport(UIKit)
+            var (r, g, b, a) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+            self.getRed(&r, green: &g, blue: &b, alpha: &a)
+            return (r, g, b, a)
+        #elseif canImport(AppKit)
+            if let c = self.usingColorSpace(NSColorSpace.deviceRGB) {
+                return (c.redComponent, c.greenComponent, c.blueComponent, c.alphaComponent)
+            }
+            else {
+                return (0, 0, 0, 0)
+            }
+        #endif
+    }
 }
