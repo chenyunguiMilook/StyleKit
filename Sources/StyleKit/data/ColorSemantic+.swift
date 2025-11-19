@@ -38,6 +38,60 @@ extension ColorSemantic {
     }
 }
 
+// 辅助扩展：只大写首字母，保持后续字符不变（防止 secondaryHover 变成 Secondaryhover）
+fileprivate extension String {
+    var firstUppercased: String {
+        prefix(1).uppercased() + dropFirst()
+    }
+}
+
+extension ColorSemantic {
+    /// 运行此方法以在控制台生成 'public enum Color ...' 代码
+    public static func generateCode() {
+        print(makeCodeString())
+    }
+    
+    private static func makeCodeString() -> String {
+        var output = """
+        // MARK: - Generated Color Accessors
+        public enum Colors {
+        """
+        
+        for categoryType in catagories {
+            guard let firstCollection = categoryType.collections.first,
+                  let firstColor = firstCollection.colors.first else { continue }
+            
+            let categoryName = firstColor.catagory // e.g., "Background"
+            output += "\n    public enum \(categoryName) {"
+            
+            for collectionType in categoryType.collections {
+                guard let exampleColor = collectionType.colors.first else { continue }
+                let collectionName = exampleColor.collection // e.g., "Default"
+                
+                output += "\n        public enum \(collectionName) {"
+                
+                for color in collectionType.colors {
+                    // 处理 Swift 关键字
+                    let variableName = color.name == "default" ? "`default`" : color.name
+                    
+                    // 构建资源名称:
+                    // 规则: "color" + Category + Collection + Name(首字母大写)
+                    // 例如: Color.Text.Neutral.onNeutral -> colorTextNeutralOnNeutral
+                    let resourceName = "color\(color.catagory)\(color.collection)\(color.name.firstUppercased)"
+                    
+                    output += "\n            public static let \(variableName) = AppColor(resource: .\(resourceName))"
+                }
+                
+                output += "\n        }"
+            }
+            output += "\n    }"
+        }
+        
+        output += "\n}"
+        return output
+    }
+}
+
 //// MARK: - Background 实现 SemanticColorCatagory
 extension ColorSemantic.Background: SemanticColorCatagory {
     public static var collections: [SemanticColorCollection.Type] {

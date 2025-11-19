@@ -29,7 +29,11 @@ extension SemanticColor {
         let jsonURL = folder
             .appendingPathComponent("\(fullName).colorset")
             .appendingPathComponent("Contents.json")
-        try? self.colorAsset.jsonString().write(to: jsonURL, createIntermediateDirectories: true)
+        do {
+            try self.colorAsset.jsonString().write(to: jsonURL, createIntermediateDirectories: true)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 

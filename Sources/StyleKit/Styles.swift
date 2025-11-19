@@ -14,6 +14,18 @@
     public typealias AppColor = NSColor
 #endif
 
+//public enum Color {
+//    public enum Background {
+//        public enum Default {
+//            public static let `default` = AppColor(resource: .color_background_default_default)//SemanticColor.fullName
+//            // other static colors ...
+//        }
+//    }
+//    public enum Text {
+//        // ...
+//    }
+//}
+
 public enum Styles {
     
     public enum Color {
