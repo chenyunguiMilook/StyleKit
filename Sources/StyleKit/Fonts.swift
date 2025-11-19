@@ -115,111 +115,111 @@ public enum Fonts {
     
     // MARK: - Title
     public static let titleHero = FontStyle(
-        fontSize: 72,
+        fontSize: 34,
         fontFamily: "Inter",
         fontWeight: .bold,
         letterSpacing: -2.16,
-        lineHeight: 86.4
+        lineHeight: 40
     )
     
     public static let titlePage = FontStyle(
-            fontSize: 48,
+            fontSize: 28,
             fontFamily: "Inter",
             fontWeight: .bold,
             letterSpacing: -0.96,
-            lineHeight: 57.6
+            lineHeight: 32
         )
     
     // MARK: - Subtitle & Heading
     public static let subtitle = FontStyle(
-            fontSize: 32,
-            fontFamily: "Inter",
-            fontWeight: .regular,
-            lineHeight: 38.4
-        )
-    
-    public static let heading = FontStyle(
-            fontSize: 24,
-            fontFamily: "Inter",
-            fontWeight: .semibold,
-            letterSpacing: -0.48,
-            lineHeight: 28.8
-        )
-    
-    public static let subheading = FontStyle(
-            fontSize: 20,
+            fontSize: 22,
             fontFamily: "Inter",
             fontWeight: .regular,
             lineHeight: 24
         )
     
-    // MARK: - Body
-    public static let bodyBase = FontStyle(
-            fontSize: 16,
+    public static let heading = FontStyle(
+            fontSize: 20,
+            fontFamily: "Inter",
+            fontWeight: .semibold,
+            letterSpacing: -0.48,
+            lineHeight: 24
+        )
+    
+    public static let subheading = FontStyle(
+            fontSize: 18,
             fontFamily: "Inter",
             fontWeight: .regular,
-            lineHeight: 22.4
+            lineHeight: 21
+        )
+    
+    // MARK: - Body
+    public static let bodyBase = FontStyle(
+            fontSize: 13,
+            fontFamily: "Inter",
+            fontWeight: .regular,
+            lineHeight: 20
         )
     
     public static let bodyStrong = FontStyle(
-            fontSize: 16,
+            fontSize: 13,
             fontFamily: "Inter",
             fontWeight: .semibold,
-            lineHeight: 22.4
+            lineHeight: 20
         )
     
     public static let bodyEmphasis = FontStyle(
-            fontSize: 16,
+            fontSize: 13,
             fontFamily: "Inter",
             fontWeight: .regular,
             fontStyle: .italic,
-            lineHeight: 22.4
+            lineHeight: 20
         )
     
     public static let bodyLink = FontStyle(
-            fontSize: 16,
+            fontSize: 13,
             fontFamily: "Inter",
             fontWeight: .regular,
-            lineHeight: 22.4,
+            lineHeight: 20,
             textDecoration: .underline
         )
     
     public static let bodySmall = FontStyle(
-            fontSize: 14,
+            fontSize: 12,
             fontFamily: "Inter",
             fontWeight: .regular,
-            lineHeight: 19.6
+            lineHeight: 16
         )
     
     public static let bodySmallStrong = FontStyle(
-            fontSize: 14,
+            fontSize: 13,
             fontFamily: "Inter",
             fontWeight: .semibold,
-            lineHeight: 19.6
+            lineHeight: 18
         )
     
     public static let bodyCode = FontStyle(
-            fontSize: 16,
+            fontSize: 13,
             fontFamily: "Roboto Mono",
             fontWeight: .regular,
-            lineHeight: 16
+            lineHeight: 13
         )
     
     // MARK: - Single Line
     public enum SingleLine {
         //"Used for any text element where you need 100% line height. For example, an input field, a label."
         public static let bodyBase = FontStyle(
-                fontSize: 16,
+                fontSize: 13,
                 fontFamily: "Inter",
                 fontWeight: .regular,
-                lineHeight: 16
+                lineHeight: 13
             )
         //"single line body small strong",
         public static let bodySmallStrong = FontStyle(
-                fontSize: 14,
+                fontSize: 12,
                 fontFamily: "Inter",
                 fontWeight: .semibold,
-                lineHeight: 14
+                lineHeight: 12
             )
     }
 }
