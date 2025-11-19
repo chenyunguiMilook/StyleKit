@@ -123,7 +123,7 @@ public struct FontToken: Sendable {
     #endif
 }
 
-public enum FontPrimitive {
+public enum Fonts {
     
     // MARK: - Title
     public static let titleHero = FontToken(
