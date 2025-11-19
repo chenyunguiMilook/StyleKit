@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import PrimeKit
 
 struct XCColorComponent: Codable {
     let alpha: String
