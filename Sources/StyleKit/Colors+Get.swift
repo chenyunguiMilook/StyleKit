@@ -7,13 +7,13 @@
 
 import Foundation
 
-public enum ContentLevel {
+public enum ContentLevel: Sendable {
     case `default`
     case secondary
     case tertiary
 }
 
-public enum Style {
+public enum Style: Sendable {
     case `default`
     case neutral
     case brand
