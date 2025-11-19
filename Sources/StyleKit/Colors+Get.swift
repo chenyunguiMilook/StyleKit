@@ -7,13 +7,13 @@
 
 import Foundation
 
-public enum ContentLevel: Sendable {
+public enum BaseLevel: Sendable {
     case `default`
     case secondary
     case tertiary
 }
 
-public enum Style: Sendable {
+public enum BaseStyle: Sendable {
     case `default`
     case neutral
     case brand
@@ -22,7 +22,7 @@ public enum Style: Sendable {
     case danger
 }
 
-public func getBackgroundColor(style: Style, level: ContentLevel, hover: Bool) -> AppColor {
+public func getBackgroundColor(style: BaseStyle, level: BaseLevel, hover: Bool) -> AppColor {
     switch style {
     case .default:
         switch level {
@@ -81,7 +81,7 @@ public func getBackgroundColor(style: Style, level: ContentLevel, hover: Bool) -
     }
 }
 
-public func getTextColor(style: Style, level: ContentLevel) -> AppColor {
+public func getTextColor(style: BaseStyle, level: BaseLevel, on: Bool) -> AppColor {
     switch style {
     case .default:
         switch level {
@@ -91,38 +91,38 @@ public func getTextColor(style: Style, level: ContentLevel) -> AppColor {
         }
     case .neutral:
         switch level {
-        case .default: return Colors.Text.Neutral.default
-        case .secondary: return Colors.Text.Neutral.secondary
-        case .tertiary: return Colors.Text.Neutral.tertiary
+        case .default: return on ? Colors.Text.Neutral.onNeutral : Colors.Text.Neutral.default
+        case .secondary: return on ? Colors.Text.Neutral.onNeutralSecondary : Colors.Text.Neutral.secondary
+        case .tertiary: return on ? Colors.Text.Neutral.onNeutralTertiary : Colors.Text.Neutral.tertiary
         }
     case .brand:
         switch level {
-        case .default: return Colors.Text.Brand.default
-        case .secondary: return Colors.Text.Brand.secondary
-        case .tertiary: return Colors.Text.Brand.tertiary
+        case .default: return on ? Colors.Text.Brand.onBrand : Colors.Text.Brand.default
+        case .secondary: return on ? Colors.Text.Brand.onBrandSecondary : Colors.Text.Brand.secondary
+        case .tertiary: return on ? Colors.Text.Brand.onBrandTertiary : Colors.Text.Brand.tertiary
         }
     case .positive:
         switch level {
-        case .default: return Colors.Text.Positive.default
-        case .secondary: return Colors.Text.Positive.secondary
-        case .tertiary: return Colors.Text.Positive.tertiary
+        case .default: return on ? Colors.Text.Positive.onPositive : Colors.Text.Positive.default
+        case .secondary: return on ? Colors.Text.Positive.onPositiveSecondary : Colors.Text.Positive.secondary
+        case .tertiary: return on ? Colors.Text.Positive.onPositiveTertiary : Colors.Text.Positive.tertiary
         }
     case .warning:
         switch level {
-        case .default: return Colors.Text.Warning.default
-        case .secondary: return Colors.Text.Warning.secondary
-        case .tertiary: return Colors.Text.Warning.tertiary
+        case .default: return on ? Colors.Text.Warning.onWarning : Colors.Text.Warning.default
+        case .secondary: return on ? Colors.Text.Warning.onWarningSecondary : Colors.Text.Warning.secondary
+        case .tertiary: return on ? Colors.Text.Warning.onWarningTertiary : Colors.Text.Warning.tertiary
         }
     case .danger:
         switch level {
-        case .default: return Colors.Text.Danger.default
-        case .secondary: return Colors.Text.Danger.secondary
-        case .tertiary: return Colors.Text.Danger.tertiary
+        case .default: return on ? Colors.Text.Danger.onDanger : Colors.Text.Danger.default
+        case .secondary: return on ? Colors.Text.Danger.onDangerSecondary : Colors.Text.Danger.secondary
+        case .tertiary: return on ? Colors.Text.Danger.onDangerTertiary : Colors.Text.Danger.tertiary
         }
     }
 }
 
-public func getBorderColor(style: Style, level: ContentLevel) -> AppColor {
+public func getBorderColor(style: BaseStyle, level: BaseLevel) -> AppColor {
     switch style {
     case .default:
         switch level {
@@ -163,7 +163,7 @@ public func getBorderColor(style: Style, level: ContentLevel) -> AppColor {
     }
 }
 
-public func getIconColor(style: Style, level: ContentLevel) -> AppColor {
+public func getIconColor(style: BaseStyle, level: BaseLevel, on: Bool) -> AppColor {
     switch style {
     case .default:
         switch level {
@@ -173,33 +173,33 @@ public func getIconColor(style: Style, level: ContentLevel) -> AppColor {
         }
     case .neutral:
         switch level {
-        case .default: return Colors.Icon.Neutral.default
-        case .secondary: return Colors.Icon.Neutral.secondary
-        case .tertiary: return Colors.Icon.Neutral.tertiary
+        case .default: return on ? Colors.Icon.Neutral.onNeutral : Colors.Icon.Neutral.default
+        case .secondary: return on ? Colors.Icon.Neutral.onNeutralSecondary : Colors.Icon.Neutral.secondary
+        case .tertiary: return on ? Colors.Icon.Neutral.onNeutralTertiary : Colors.Icon.Neutral.tertiary
         }
     case .brand:
         switch level {
-        case .default: return Colors.Icon.Brand.default
-        case .secondary: return Colors.Icon.Brand.secondary
-        case .tertiary: return Colors.Icon.Brand.tertiary
+        case .default: return on ? Colors.Icon.Brand.onBrand : Colors.Icon.Brand.default
+        case .secondary: return on ? Colors.Icon.Brand.onBrandSecondary : Colors.Icon.Brand.secondary
+        case .tertiary: return on ? Colors.Icon.Brand.onBrandTertiary : Colors.Icon.Brand.tertiary
         }
     case .positive:
         switch level {
-        case .default: return Colors.Icon.Positive.default
-        case .secondary: return Colors.Icon.Positive.secondary
-        case .tertiary: return Colors.Icon.Positive.tertiary
+        case .default: return on ? Colors.Icon.Positive.onPositive : Colors.Icon.Positive.default
+        case .secondary: return on ? Colors.Icon.Positive.onPositiveSecondary : Colors.Icon.Positive.secondary
+        case .tertiary: return on ? Colors.Icon.Positive.onPositiveTertiary : Colors.Icon.Positive.tertiary
         }
     case .warning:
         switch level {
-        case .default: return Colors.Icon.Warning.default
-        case .secondary: return Colors.Icon.Warning.secondary
-        case .tertiary: return Colors.Icon.Warning.tertiary
+        case .default: return on ? Colors.Icon.Warning.onWarning : Colors.Icon.Warning.default
+        case .secondary: return on ? Colors.Icon.Warning.onWarningSecondary : Colors.Icon.Warning.secondary
+        case .tertiary: return on ? Colors.Icon.Warning.onWarningTertiary : Colors.Icon.Warning.tertiary
         }
     case .danger:
         switch level {
-        case .default: return Colors.Icon.Danger.default
-        case .secondary: return Colors.Icon.Danger.secondary
-        case .tertiary: return Colors.Icon.Danger.tertiary
+        case .default: return on ? Colors.Icon.Danger.onDanger : Colors.Icon.Danger.default
+        case .secondary: return on ? Colors.Icon.Danger.onDangerSecondary : Colors.Icon.Danger.secondary
+        case .tertiary: return on ? Colors.Icon.Danger.onDangerTertiary : Colors.Icon.Danger.tertiary
         }
     }
 }
