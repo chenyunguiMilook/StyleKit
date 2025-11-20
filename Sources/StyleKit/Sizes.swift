@@ -35,6 +35,10 @@ public enum Sizes {
         public static let _400: CGFloat = SizePrimitive.Radius._400.value
         public static let full: CGFloat = SizePrimitive.Radius.full.value
     }
+    public enum Height {
+        public static let _100: CGFloat = SizePrimitive.Height._100.value
+        public static let _200: CGFloat = SizePrimitive.Height._200.value
+    }
     public enum Depth {
         public static let _0: CGFloat = SizePrimitive.Depth._0.value
         public static let _025: CGFloat = SizePrimitive.Depth._025.value
