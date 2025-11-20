@@ -78,6 +78,7 @@ public enum Styles {
     
     public enum Insets {
         public static let textInputer = UIEdgeInsets(top: 2, left: 4, bottom: 2, right: 4)
+        public static let textEnumPicker = UIEdgeInsets(top: 4, left: 12, bottom: 4, right: 12)
         public static let panelHeader = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
     }
     
