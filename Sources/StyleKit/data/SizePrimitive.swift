@@ -15,6 +15,7 @@ public protocol SizeCollection: Sendable {
 public enum SizeCollectionType: String, Sendable, CaseIterable {
     case space
     case radius
+    case height
     case depth
     case stroke
     case blur
@@ -137,6 +138,16 @@ public enum SizePrimitive {
         ]
     }
     
+    public enum Height: SizeCollection {
+        public static let type = SizeCollectionType.height
+        public static let _100 = SizeToken(collection: type, name: "100", value: 22)
+        public static let _200 = SizeToken(collection: type, name: "100", value: 24)
+        
+        public static let tokens: [SizeToken] = [
+            _100, _200
+        ]
+    }
+    
     // MARK: - 所有集合
     public static let collections: [any SizeCollection.Type] = [
         Space.self, Radius.self, Depth.self,
@@ -148,6 +159,7 @@ public enum SizePrimitive {
         switch type {
         case .space: return Space.self
         case .radius: return Radius.self
+        case .height: return Height.self
         case .depth: return Depth.self
         case .stroke: return Stroke.self
         case .blur: return Blur.self
