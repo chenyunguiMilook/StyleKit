@@ -22,6 +22,70 @@ public enum BaseStyle: Sendable {
     case danger
 }
 
+public enum ForegroundType: Sendable {
+    case text
+    case icon
+}
+
+public struct BackgroundColor: Sendable {
+    public let style: BaseStyle
+    public let level: BaseLevel
+    public let hover: Bool
+    
+    public init(style: BaseStyle, level: BaseLevel, hover: Bool) {
+        self.style = style
+        self.level = level
+        self.hover = hover
+    }
+}
+
+public struct ForegroundColor: Sendable {
+    public let type: ForegroundType
+    public let style: BaseStyle
+    public let level: BaseLevel
+    public let on: Bool
+    
+    public init(type: ForegroundType, style: BaseStyle, level: BaseLevel, on: Bool) {
+        self.type = type
+        self.style = style
+        self.level = level
+        self.on = on
+    }
+}
+
+public struct BorderColor: Sendable {
+    public let style: BaseStyle
+    public let level: BaseLevel
+    
+    public init(style: BaseStyle, level: BaseLevel) {
+        self.style = style
+        self.level = level
+    }
+}
+
+// MARK: - color style
+public protocol ColorStyle {
+    var color: AppColor { get }
+}
+extension BackgroundColor: ColorStyle {
+    public var color: AppColor {
+        getBackgroundColor(style: style, level: level, hover: hover)
+    }
+}
+extension ForegroundColor: ColorStyle {
+    public var color: AppColor {
+        switch type {
+        case .text: getTextColor(style: style, level: level, on: on)
+        case .icon: getIconColor(style: style, level: level, on: on)
+        }
+    }
+}
+extension BorderColor: ColorStyle {
+    public var color: AppColor {
+        getBorderColor(style: style, level: level)
+    }
+}
+
 public func getBackgroundColor(style: BaseStyle, level: BaseLevel, hover: Bool) -> AppColor {
     switch style {
     case .default:
