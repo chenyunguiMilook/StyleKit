@@ -64,7 +64,7 @@ public struct BorderColor: Sendable {
 }
 
 // MARK: - color style
-public protocol ColorStyle {
+public protocol ColorStyle: Sendable {
     var color: AppColor { get }
 }
 extension BackgroundColor: ColorStyle {
