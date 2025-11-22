@@ -39,6 +39,10 @@ public struct BackgroundColor: Sendable {
     }
 }
 
+extension BackgroundColor {
+    public static let `default` = BackgroundColor(style: .default, level: .default, hover: false)
+}
+
 public struct ForegroundColor: Sendable {
     public let type: ForegroundType
     public let style: BaseStyle
@@ -53,6 +57,21 @@ public struct ForegroundColor: Sendable {
     }
 }
 
+extension ForegroundColor {
+    public static let defaultText = ForegroundColor(type: .text, style: .default, level: .default, on: false)
+    public static let defaultIcon = ForegroundColor(type: .icon, style: .default, level: .default, on: false)
+    
+    public static let secondaryText = ForegroundColor(type: .text, style: .default, level: .tertiary, on: false)
+    public static let secondaryIcon = ForegroundColor(type: .icon, style: .default, level: .tertiary, on: false)
+    
+    public static func text(style: BaseStyle, level: BaseLevel, on: Bool) -> ForegroundColor {
+        ForegroundColor(type: .text, style: style, level: level, on: on)
+    }
+    public static func icon(style: BaseStyle, level: BaseLevel, on: Bool) -> ForegroundColor {
+        ForegroundColor(type: .icon, style: style, level: level, on: on)
+    }
+}
+
 public struct BorderColor: Sendable {
     public let style: BaseStyle
     public let level: BaseLevel
@@ -61,6 +80,10 @@ public struct BorderColor: Sendable {
         self.style = style
         self.level = level
     }
+}
+
+extension BorderColor {
+    public static let `default` = BorderColor(style: .default, level: .default)
 }
 
 // MARK: - color style
