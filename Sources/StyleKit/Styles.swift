@@ -5,14 +5,6 @@
 //  Created by chenyungui on 2025/9/16.
 //
 
-#if canImport(UIKit)
-    import UIKit
-    public typealias AppColor = UIColor
-
-#elseif canImport(AppKit) && !targetEnvironment(macCatalyst)
-    import AppKit
-    public typealias AppColor = NSColor
-#endif
 
 /*
 public enum Styles {

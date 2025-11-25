@@ -8,6 +8,15 @@
 import CoreGraphics
 import Foundation
 
+#if canImport(UIKit)
+    import UIKit
+    public typealias AppColor = UIColor
+
+#elseif canImport(AppKit) && !targetEnvironment(macCatalyst)
+    import AppKit
+    public typealias AppColor = NSColor
+#endif
+
 extension AppColor {
     convenience init(hex: String, alpha: CGFloat = 1.0) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)

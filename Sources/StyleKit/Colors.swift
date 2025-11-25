@@ -5,8 +5,16 @@
 //  Created by chenyungui on 2025/11/19.
 //
 
+
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
+
 // MARK: - Generated Color Accessors
 public enum Colors {
+    // MARK: - Background
     public enum Background {
         public enum Default {
             public static let `default` = AppColor(resource: .colorBackgroundDefaultDefault)
@@ -66,6 +74,7 @@ public enum Colors {
             public static let measurement = AppColor(resource: .colorBackgroundUtilitiesMeasurement)
         }
     }
+    // MARK: - Text
     public enum Text {
         public enum Default {
             public static let `default` = AppColor(resource: .colorTextDefaultDefault)
@@ -121,6 +130,7 @@ public enum Colors {
             public static let textOnMeasurement = AppColor(resource: .colorTextUtilitiesTextOnMeasurement)
         }
     }
+    // MARK: - Border
     public enum Border {
         public enum Default {
             public static let `default` = AppColor(resource: .colorBorderDefaultDefault)
@@ -160,6 +170,7 @@ public enum Colors {
             public static let swatch = AppColor(resource: .colorBorderUtilitiesSwatch)
         }
     }
+    // MARK: - Icon
     public enum Icon {
         public enum Default {
             public static let `default` = AppColor(resource: .colorIconDefaultDefault)
@@ -215,4 +226,10 @@ public enum Colors {
             public static let iconOnMeasurement = AppColor(resource: .colorIconUtilitiesIconOnMeasurement)
         }
     }
+}
+
+extension Colors {
+    public static let pixelGridColor = AppColor.systemGray.withAlphaComponent(0.3)
+    public static let rulerBg = AppColor(resource: .rulerBg)
+    public static let rulerMark = AppColor(resource: .rulerMark)
 }
