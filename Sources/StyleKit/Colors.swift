@@ -232,4 +232,5 @@ extension Colors {
     public static let pixelGridColor = AppColor.systemGray.withAlphaComponent(0.3)
     public static let rulerBg = AppColor(resource: .rulerBg)
     public static let rulerMark = AppColor(resource: .rulerMark)
+    public static let editorBackground = AppColor(resource: .background)
 }
