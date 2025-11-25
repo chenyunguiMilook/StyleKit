@@ -38,5 +38,6 @@ extension AppEdgeInsets {
     
     public enum Panel {
         public static let layoutMargin = AppEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        public static let title = AppEdgeInsets(top: 2, left: 4, bottom: 2, right: 4)
     }
 }
