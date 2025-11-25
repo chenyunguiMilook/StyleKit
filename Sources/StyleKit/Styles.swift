@@ -14,18 +14,7 @@
     public typealias AppColor = NSColor
 #endif
 
-//public enum Color {
-//    public enum Background {
-//        public enum Default {
-//            public static let `default` = AppColor(resource: .color_background_default_default)//SemanticColor.fullName
-//            // other static colors ...
-//        }
-//    }
-//    public enum Text {
-//        // ...
-//    }
-//}
-
+/*
 public enum Styles {
     
     public enum Color {
@@ -87,7 +76,7 @@ public enum Styles {
     public enum Size {
         public static let controlHeight: CGFloat = 22
         public static let controlBorderWidth: CGFloat = 1
-        public static let panelHeaderHeight = Styles.insets.panelHeader.top + Styles.insets.panelHeader.bottom + Styles.size.controlHeight
+        public static let panelHeaderHeight = Styles.insets.panelHeader.top + Styles.insets.panelHeader.bottom + Sizes.Height._100
         public static let panelFooterHeight: Double = 12
     }
     
@@ -105,3 +94,4 @@ public enum Styles {
     public static let size = Size.self
     public static let font = Font.self
 }
+*/
