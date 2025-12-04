@@ -233,4 +233,5 @@ extension Colors {
     public static let rulerBg = AppColor(resource: .rulerBg)
     public static let rulerMark = AppColor(resource: .rulerMark)
     public static let editorBackground = AppColor(resource: .background)
+    public static let hoverColor = AppColor.init(hex: "#3478f6")
 }
